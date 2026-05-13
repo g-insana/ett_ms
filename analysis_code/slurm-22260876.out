@@ -1,0 +1,13 @@
+using: bs_ett_dir: bs_tmp/ett_ms data_dir: outdir9 data_ext: incsurv_cm0 data_date: 2026-05-13 fa_dir: fasta9_incsurv
+/homes/pearson/bs_tmp/ett_ms/outdir9_incsurv_cm0/ACIBA_2026-05-13_incsurv_cm0
+~/bs_tmp/ett_ms/outdir9_incsurv_cm0/ACIBA_2026-05-13_incsurv_cm0 ~/ett/ett_ms/analysis_code
+ACIBA genome_v_prot2.py short done Wed 13 May 18:55:49 BST 2026
+no ss_align_info[KRR91476|549] ACIBA_GCA_000498375.2_B_N50H:6.62.tfxg
+no ss_align_info[CQR68387|208] ACIBA_GCA_003029495.1_B_N50H:6.60.tfxg
+no ss_align_info[CQR67953|277] ACIBA_GCA_048565755.1_B_N50L:3.71.tfxg
+no ss_align_info[CQR68387|208] ACIBA_GCA_000353915.1_S_N50:4.95.tfxg
+no ss_align_info[KRR91476|549] ACIBA_GCA_000588695.1_S_N50:5.02.tfxg
+no ss_align_info[CQR68387|208] ACIBA_GCA_000589475.1_S_N50:4.84.tfxg
+no ss_align_info[KRR91476|549] ACIBA_GCA_003940925.1_S_N50:5.08.tfxg
+no ss_align_info[KRR91476|549] ACIBA_GCA_006493035.1_S_N50:5.02.tfxg
+~/ett/ett_ms/analysis_code
