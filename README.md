@@ -45,7 +45,9 @@ cd ett_ms && mamba create --name ett --file requirements.txt --channel conda-for
 mamba activate ett
 ```
 
-**Note** that you also need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) program protein vs dna searches. Binaries can be downloaded from the releases tab of that github or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
+**Note** that you also need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) program for the protein vs dna searches.
+Binaries can be downloaded from the [releases tab of the tfastx github](https://github.com/wrpearson/fasta36/releases)
+or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
 
 ## COMMAND LINE USAGE
 
