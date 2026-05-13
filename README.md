@@ -1,6 +1,6 @@
 # ett_ms
+Code for the analysis and figures of the manuscript:
 ## Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
-(code for the analysis and figures of the manuscript)
 
 # Abstract
 
