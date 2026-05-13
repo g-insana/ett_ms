@@ -1,0 +1,25 @@
+files:
+  - ECOLX_miss_tfxg.summ_r3
+  - KLEPN_miss_tfxg.summ_r3
+  - STAAU_miss_tfxg.summ_r3
+  - SALER_miss_tfxg.summ_r3
+  - STREE_miss_tfxg.summ_r3
+  - ACIBA_miss_tfxg.summ_r3
+  - MYCTX_miss_tfxg.summ_r3
+  - LISMN_miss_tfxg.summ_r3
+  - ENTFC_miss_tfxg.summ_r3
+  - CLODI_miss_tfxg.summ_r3
+  - CAMJU_miss_tfxg.summ_r3
+  - HELPX_miss_tfxg.summ_r3
+  - NEIME_miss_tfxg.summ_r3
+  - SHIFL_miss_tfxg.summ_r3
+  - BURPE_miss_tfxg.summ_r3
+  - NEIGO_miss_tfxg.summ_r3
+  - 9ENTR_miss_tfxg.summ_r3
+  - LEGPN_miss_tfxg.summ_r3
+  - PSEAI_miss_tfxg.summ_r3
+  - VIBCL_miss_tfxg.summ_r3
+
+pdf: supp_f8_miss_summ.pdf
+
+stats: yields.tsv

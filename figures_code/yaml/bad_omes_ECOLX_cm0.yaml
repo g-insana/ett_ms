@@ -1,0 +1,14 @@
+omes: 
+  - ECOLX_c0.5_p0.90_cm0.bad_omes.samp.am
+
+tfx_bad:
+  - ECOLX_bad_omes_2000.tfxg_stats_BHL3ss
+
+tfx_samp:
+  - ECOLX_bad_omes_2000.tfxg_stats_S1K3ss
+
+pdf: f3_dist_busco_ECOLX_cm0.pdf
+
+stats: outdir8_incsurv_cm0.tsv
+
+names: ../oscode_names.tsv

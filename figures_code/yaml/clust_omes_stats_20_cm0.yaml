@@ -1,0 +1,31 @@
+files:
+  - ECOLX_proteome.stats
+  - KLEPN_proteome.stats
+  - STAAU_proteome.stats
+  - SALER_proteome.stats
+  - STREE_proteome.stats
+  - ACIBA_proteome.stats
+  - MYCTX_proteome.stats
+  - LISMN_proteome.stats
+  - ENTFC_proteome.stats
+  - CLODI_proteome.stats
+  - CAMJU_proteome.stats
+  - HELPX_proteome.stats
+  - NEIME_proteome.stats
+  - SHIFL_proteome.stats
+  - BURPE_proteome.stats
+  - NEIGO_proteome.stats
+  - 9ENTR_proteome.stats
+  - LEGPN_proteome.stats
+  - PSEAI_proteome.stats
+  - VIBCL_proteome.stats
+
+pdf: suppl_f4_ome_cm0_stats6.pdf
+
+mode_good: TRUE
+
+stats: outdir8_incsurv_cm0.tsv
+
+taxa_order: ../oscode.srt
+
+fa_stats: fa_cnt_oscode.tsv

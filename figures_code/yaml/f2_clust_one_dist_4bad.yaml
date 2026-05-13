@@ -1,0 +1,9 @@
+files: 
+  - ECOLX_cl299099.clust
+  - KLEPN_cl399047.clust
+  - SALER_cl199207.clust
+  - NEIGO_cl14837.clust
+
+mode_good: TRUE
+
+stats: yields.tsv

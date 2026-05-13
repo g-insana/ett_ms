@@ -1,0 +1,14 @@
+files: 
+  - ECOLX_c0.5_p0.90_cm0.bad_clust
+  - KLEPN_c0.5_p0.90_cm0.bad_clust
+  - SALER_c0.5_p0.90_cm0.bad_clust
+  - NEIGO_c0.5_p0.90_cm0.bad_clust
+
+pdf: f4_bad_clust_4bad_cm0.pdf
+
+mode_good: TRUE
+
+stats: outdir8_incsurv_cm0.tsv
+
+names: ../oscode_names.tsv
+

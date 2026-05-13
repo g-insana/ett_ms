@@ -1,0 +1,20 @@
+omes:
+  - ECOLX_c0.5_p0.90_cm0.bad_omes.samp.am
+  - KLEPN_c0.5_p0.90_cm0.bad_omes.samp.am
+  - SALER_c0.5_p0.90_cm0.bad_omes.samp.am
+
+bad_clust:
+  - ECOLX_c0.5_p0.90_cm0.bad_clust
+  - KLEPN_c0.5_p0.90_cm0.bad_clust
+  - SALER_c0.5_p0.90_cm0.bad_clust
+
+cl_lens:
+  - ECOLX_clust_proteome_lens.samp_2B
+  - KLEPN_clust_proteome_lens.samp_2B
+  - SALER_clust_proteome_lens.samp_2B
+
+pdf: supp_f6_ECOLX_KLEPN_SALER_2B.pdf
+
+stats: outdir8_incsurv_cm0.tsv
+
+names: ../oscode_names.tsv

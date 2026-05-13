@@ -1,0 +1,21 @@
+omes: 
+  - ECOLX_c0.5_p0.90_cm0.bad_omes.samp.am
+  - KLEPN_c0.5_p0.90_cm0.bad_omes.samp.am
+  - SALER_c0.5_p0.90_cm0.bad_omes.samp.am
+
+tfx_bad:
+  - ECOLX_bad_omes_2000.tfxg_stats_BHL3ss
+  - KLEPN_bad_omes_2000.tfxg_stats_BHL3ss
+  - SALER_bad_omes_2000.tfxg_stats_BHL3ss
+
+tfx_samp:
+  - ECOLX_bad_omes_2000.tfxg_stats_S1K3ss
+  - KLEPN_bad_omes_2000.tfxg_stats_S1K3ss
+  - SALER_bad_omes_2000.tfxg_stats_S1K3ss
+
+
+pdf: bad_omes_ECOLX_KLEPN_SALER.pdf
+
+stats: outdir8_incsurv_cm0.tsv
+
+names: ../oscode_names.tsv
