@@ -45,4 +45,24 @@ cd ett_ms && mamba create --name ett --file requirements.txt --channel conda-for
 mamba activate ett
 ```
 
-**Note** that you also need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) program protein vs dna searches: 
+**Note** that you also need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) program protein vs dna searches. Binaries can be downloaded from the releases tab of that github or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
+
+## COMMAND LINE USAGE
+
+## DOCUMENTATION
+
+## LINKS
+
+(to Zenodo/Figshare datasets)
+(to biorxiv preprint)
+
+## CITATION
+
+
+If you find this software useful, please consider citing our [paper](link_to_biorxiv)
+
+``` 
+Insana, G., Martin, M.J. & Pearson, W.R.
+Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
+```
+
