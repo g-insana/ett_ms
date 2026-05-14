@@ -16,8 +16,8 @@ $BIN_DIR/fig1_clust_qual_5p.R -Y $YAML/clust_lens_20_cm0.yaml --stats yields.tsv
 ##ln -s -f `pwd`/f1_clust_stats_cm0_pub.pdf `pwd`/suppl_f1_clust_stats_cm0_pub.pdf ../figs
 
 ## figure 2 -- use current version
-echo "$BIN_DIR/clust_one_dist.R -Y clust_one_dist_4bad.yaml --stats yields.tsv --pub --pdf f2_clust_one_4bad_pub.pdf"
-$BIN_DIR/fig2_clust_one_dist.R -Y $YAML/f2_clust_one_dist_4bad.yaml --pub --pdf f2_clust_one_4bad_pub.pdf
+## echo "$BIN_DIR/clust_one_dist.R -Y clust_one_dist_4bad.yaml --stats yields.tsv --pub --pdf f2_clust_one_4bad_pub.pdf"
+## $BIN_DIR/fig2_clust_one_dist.R -Y $YAML/f2_clust_one_dist_4bad.yaml --pub --pdf f2_clust_one_4bad_pub.pdf
 
 ## figure 3 -- cluster quality for 4 distant taxa
 echo "fig3:: $BIN_DIR/fig3_clust_dist2m.R -Y clust_dist_4bad_cm0.yaml --stats yields.tsv --pdf f3_clust_dist_4far.pdf"

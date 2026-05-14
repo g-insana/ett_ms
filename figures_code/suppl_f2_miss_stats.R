@@ -46,7 +46,9 @@ option_list = list(
 	    make_option(c("-Y","--yaml"),type='character',action='store',help='yaml file', default=NA),
 	    make_option(c("--pub"),action='store_true',help='publication plot', default=FALSE),
 	    make_option(c("-S","--stats"),type='character',action='store',help='os_stats_file', default=NA),
-	    make_option(c("-J","--jitter"),action='store_true',help='jitter', default=FALSE)
+	    make_option(c("-J","--jitter"),action='store_true',help='jitter', default=FALSE),
+	    make_option(c("--a_label"),action='store',help='panel a label', default=NA),
+	    make_option(c("--b_label"),action='store',help='panel b label', default=NA)
 	    )
 
 opt <- get_yaml_opts(args, option_list, paste0(p.name,'.yaml'))
@@ -80,11 +82,6 @@ if (!is.na(opt$stats) && length(opt$stats)>0) {
    if (opt$debug) {
       print(head(os_stats))
    }
-}
-
-if (! is.na(opt$all_file)) {
-   all_df <- read.table(opt$all_file,header=TRUE,sep='\t')
-   print(summary(all_df))
 }
 
 miss_stats_df = NULL
