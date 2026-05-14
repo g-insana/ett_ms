@@ -1,0 +1,26 @@
+omes: 
+  - KLEPN_c0.5_p0.90_cm0.bad_omes.samp.am
+  - SALER_c0.5_p0.90_cm0.bad_omes.samp.am
+  - STREE_c0.5_p0.90_cm0.bad_omes.samp.am
+  - LISMN_c0.5_p0.90_cm0.bad_omes.samp.am
+  - CAMJU_c0.5_p0.90_cm0.bad_omes.samp.am
+
+tfx_bad:
+  - KLEPN_bad_omes_2000.tfxg_stats_BHL3ss
+  - SALER_bad_omes_2000.tfxg_stats_BHL3ss
+  - STREE_bad_omes_2000.tfxg_stats_BHL3ss
+  - LISMN_bad_omes_2000.tfxg_stats_BHL3ss
+  - CAMJU_bad_omes_2000.tfxg_stats_BHL3ss
+
+tfx_samp:
+  - KLEPN_bad_omes_2000.tfxg_stats_S1K3ss
+  - SALER_bad_omes_2000.tfxg_stats_S1K3ss
+  - STREE_bad_omes_2000.tfxg_stats_S1K3ss
+  - LISMN_bad_omes_2000.tfxg_stats_S1K3ss
+  - CAMJU_bad_omes_2000.tfxg_stats_S1K3ss
+
+pdf: bad_omes_max6_pub.pdf
+
+stats: outdir8_incsurv_cm0.tsv
+
+pub: TRUE

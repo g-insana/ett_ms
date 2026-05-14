@@ -1,0 +1,31 @@
+files:
+  - ECOLX_c0.5_p0.90_cm0.bad_clust
+  - KLEPN_c0.5_p0.90_cm0.bad_clust
+  - STAAU_c0.5_p0.90_cm0.bad_clust
+  - SALER_c0.5_p0.90_cm0.bad_clust
+  - STREE_c0.5_p0.90_cm0.bad_clust
+  - ACIBA_c0.5_p0.90_cm0.bad_clust
+  - MYCTX_c0.5_p0.90_cm0.bad_clust
+  - LISMN_c0.5_p0.90_cm0.bad_clust
+  - ENTFC_c0.5_p0.90_cm0.bad_clust
+  - CLODI_c0.5_p0.90_cm0.bad_clust
+  - CAMJU_c0.5_p0.90_cm0.bad_clust
+  - HELPX_c0.5_p0.90_cm0.bad_clust
+  - NEIME_c0.5_p0.90_cm0.bad_clust
+  - SHIFL_c0.5_p0.90_cm0.bad_clust
+  - BURPE_c0.5_p0.90_cm0.bad_clust
+  - NEIGO_c0.5_p0.90_cm0.bad_clust
+  - 9ENTR_c0.5_p0.90_cm0.bad_clust
+  - LEGPN_c0.5_p0.90_cm0.bad_clust
+  - PSEAI_c0.5_p0.90_cm0.bad_clust
+  - VIBCL_c0.5_p0.90_cm0.bad_clust
+
+pdf: f2_bad_lens_20_cm0.pdf
+
+mode_good: TRUE
+
+stats: outdir8_incsurv_cm0.tsv
+
+names: ../oscode_names.tsv
+
+taxa_order: ../oscode.srt

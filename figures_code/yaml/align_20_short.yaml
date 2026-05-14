@@ -1,0 +1,27 @@
+files:
+  - ECOLX_bad_omes_2000.tfxg_stats_S1K3ss
+  - KLEPN_bad_omes_2000.tfxg_stats_S1K3ss
+  - STAAU_bad_omes_2000.tfxg_stats_S1K3ss
+  - SALER_bad_omes_2000.tfxg_stats_S1K3ss
+  - STREE_bad_omes_2000.tfxg_stats_S1K3ss
+  - ACIBA_bad_omes_2000.tfxg_stats_S1K3ss
+  - MYCTX_bad_omes_2000.tfxg_stats_S1K3ss
+  - LISMN_bad_omes_2000.tfxg_stats_S1K3ss
+  - ENTFC_bad_omes_2000.tfxg_stats_S1K3ss
+  - CLODI_bad_omes_2000.tfxg_stats_S1K3ss
+  - CAMJU_bad_omes_2000.tfxg_stats_S1K3ss
+  - HELPX_bad_omes_2000.tfxg_stats_S1K3ss
+  - NEIME_bad_omes_2000.tfxg_stats_S1K3ss
+  - SHIFL_bad_omes_2000.tfxg_stats_S1K3ss
+  - BURPE_bad_omes_2000.tfxg_stats_S1K3ss
+  - NEIGO_bad_omes_2000.tfxg_stats_S1K3ss
+  - 9ENTR_bad_omes_2000.tfxg_stats_S1K3ss
+  - LEGPN_bad_omes_2000.tfxg_stats_S1K3ss
+  - PSEAI_bad_omes_2000.tfxg_stats_S1K3ss
+  - VIBCL_bad_omes_2000.tfxg_stats_S1K3ss
+
+pdf: f7_align_20_short.pdf
+
+mode_good: TRUE
+
+stats: yields.tsv
