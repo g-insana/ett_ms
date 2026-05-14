@@ -31,7 +31,9 @@ clusters those proteomes contribute to.
 
 - Fig. 1 is produced from the `OSCODE...bad_clust` files, which is produced by `proteome_stats5slm4.py`
 
-- Suppl. Fig. 1 is produced from the OSCODE_proteome.stats` files, which is produced by `stat_prot_cluster.py`.
+- Suppl. Fig. 1 is produced from the OSCODE_proteome.stats` files, which are produced by `stat_prot_cluster.py`.
+
+- Suppl. Fig 2 is produced from the `OSCODE_miss_tfxg.summ_r3` files, which are produced by `track_missing_prots2.py`, `genome_v_prot2.py`, and `parse_tfxg3s.py`.
 
 - Fig. 2 is produced from `OSCODE_cl_XXXXXXX.clust` files (XXXXX is
   a cluster number for that OSCODE), which are produced by
@@ -70,3 +72,10 @@ the results written to files: `OSCODE_bad_omes_2000.tfxg_stats_BHL3ss`
   using the sampled data from all 20 bacteria
   (`OSCODE_bad_omes_2000.tfxg_stats_S1K3ss`) and the `suppl_f7_align_props_box5p.R` script.
 
+The `bs_bad_clusters_oscode_ins2_cm0.sh` script runs all the necessary scripts.
+
+`run_outdir9_incsurv_cm0.sh` sets up the necessary environment variables so that `bs_bad_clusters_oscode_ins2_cm0.sh` runs properly.
+
+`run_outdir9_incsurv_cm0.sh OSCODE` runs analysis for one bacteria.
+
+`run_outdir9_incsurv_cm0.sh $(cat oscodes20)` runs the analysis for all 20 bacteria.

@@ -64,16 +64,30 @@ for OSCODE in $*; do
 
     pushd $tfx_dir
 
+    data_prefix=${OSCODE}_${param_name}
+    ins_data_prefix=$INS_PROT/$OSCODE/$data_prefix
+
+    map_file=$INS_PROT/$OSCODE/${OSCODE}_proteomeids_busco.tsv 
+    if [[ ! -f $map_file ]]; then
+	map_file=$INS_PROT/$OSCODE/${OSCODE}.proteomes.tsv
+	if [[ ! -f $map_file ]]; then
+	    echo "Mapping file: $map_file not found"
+	    exit 1
+	fi
+    fi
+
+    echo "working on $OSCODE/$data_prefix"
+
     ## this version works with the files produced in the initial analysis in ${INS_PROT}/${OSCODE}/${OSCODE}_${param_name}.short_tfx_ex
     ## so it does not run $proteome_stats_bin
 
     ##    echo "program: " $proteome_stats_bin
 
-    ## $ETT_BIN/$proteome_stats_bin --mode_good_only --bad_low_fract 0.0 --target_length=200 -P $INS_PROT/$OSCODE/${OSCODE}_proteomeids_busco_assemblymetadata.tsv --out_clust_file=${OSCODE}_${param_name}.bad_clust --out_omes_file=${OSCODE}_${param_name}.bad_omes.samp.am --out_tfx_file=$tfx_name.short_tfx_ex --samp_N50 --samp_prots=2000 --bad_tfx_ex=100 --bad_prots=2000 --samp_tfx_ex=100 --long_prots=100 --long_tfx_clust_file=$tfx_name.long_ex_clust --long_tfx_ome_file=$tfx_name.long_ex_ome $INS_PROT/$OSCODE/Protein_clusters_m50pct.tsv
+    ## $ETT_BIN/$proteome_stats_bin --mode_good_only --bad_low_fract 0.0 --target_length=200 -P $map_file --out_clust_file=${OSCODE}_${param_name}.bad_clust --out_omes_file=${OSCODE}_${param_name}.bad_omes.samp.am --out_tfx_file=$tfx_name.short_tfx_ex --samp_N50 --samp_prots=2000 --bad_tfx_ex=100 --bad_prots=2000 --samp_tfx_ex=100 --long_prots=100 --long_tfx_clust_file=$tfx_name.long_ex_clust --long_tfx_ome_file=$tfx_name.long_ex_ome $INS_PROT/$OSCODE/Protein_clusters_m50pct.tsv
     ## echo "$OSCODE proteome_stats done" `date`
 
     ## produce OSCODE_proteome.stats files (Suppl. Fig. 1)
-    ${ETT_BIN}/stat_prot_cluster.py --in_clust_file $data_prefix.bad_clust --in_samp_omes $data_prefix.bad_omes.samp.am -P $INS_PROT/${OSCODE}/${OSCODE}.proteomes.tsv $INS_PROT/${OSCODE}/Protein_clusters_m50pct.tsv --miss_samp_file ${OSCODE}_miss.tab > ${OSCODE}_proteome.stats
+    ${ETT_BIN}/stat_prot_cluster.py --in_clust_file $ins_data_prefix.bad_clust --in_samp_omes $ins_data_prefix.bad_omes.samp.am -P $map_file --miss_samp_file ${OSCODE}_miss.tab $INS_PROT/${OSCODE}/Protein_clusters_m50pct.tsv > ${OSCODE}_proteome.stats
 
     ## do the .tfx searches
     rm -f ${OSCODE}_bad_omes_2000.tfxg_stats_BHL3ss ${OSCODE}_bad_omes_2000.tfxg_stats_S1K3ss
@@ -94,6 +108,24 @@ for OSCODE in $*; do
 
     echo "$OSCODE tfxg files parsed, tfxg_stats files produced"
 
-    popd
+    ## look for proteins missing from proteomes
+    
+    echo "${ETT_BIN}/track_missing_prots2.py --miss_fract=0.67 -P $map_file $INS_PROT/${OSCODE}/Protein_clusters_m50pct.tsv > ${OSCODE}_miss_prots.miss_tfx_ex_r3"
 
+    ${ETT_BIN}/track_missing_prots2.py --miss_fract=0.67 -P $map_file $INS_PROT/${OSCODE}/Protein_clusters_m50pct.tsv > ${OSCODE}_miss_prots.miss_tfx_ex_r3
+
+    rm -f *.miss_tfx_r3
+    ${ETT_BIN}/genome_v_prot2.py --script down_fasta_dir_oscode_acc.sh --fa_dir=$fa_dir --oscode $OSCODE --suff miss_tfx_r3 ${OSCODE}_miss_prots.miss_tfx_ex_r3
+
+    ${ETT_BIN}/parse_tfxg3s.py *.miss_tfx_r3 > ${OSCODE}_miss_tfxg.summ_r3
+
+    echo "$OSCODE missing protein tfx search done"
+
+    ${ETT_BIN}/proteome_v_prot2.py -P $map_file --script down_fasta_dir_oscode_acc.sh --fa_dir=$fa_dir --oscode $OSCODE --suff miss_ok2_r3 ${OSCODE}_miss_prots.miss_tfx_ex_r3
+
+    ${ETT_BIN}/parse_fa36.py *.miss_ok2_r3 > ${OSCODE}_pmiss_ok2.summ_r3
+
+    echo "$OSCODE missing protein fasta search done"
+
+    popd
 done
