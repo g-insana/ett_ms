@@ -10,7 +10,7 @@ various cluster analysis scripts, and the figures in the papers.  The
 
 ## Overall analysis strategy.
 
-1. The `mmseqs2` clustering script produces a cluster file:
+1. The (clustering and labelling pipeline)[https://github.com/g-insana/ProteomeCluster] produces a clusters file:
 `Protein_clusters_m50pct.tsv`, with tab-delimited fields starting with a header line:
 ```
 cluster_id protein_ids proteins_count proteomes_count representative seqlen_range seqlen_mode
