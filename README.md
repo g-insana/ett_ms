@@ -3,7 +3,7 @@
 This repository contains the code for the analysis and figures of the manuscript:
 ## Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
 
-The code for the clustering of proteomes and processing of the clusters is available in another repository: [ProteomeCluster](https://github.com/g-insana/ProteomeCluster)
+Note that the code for the clustering of proteomes and processing of the clusters is available in another repository: [ProteomeCluster](https://github.com/g-insana/ProteomeCluster)
 
 
 # Abstract
