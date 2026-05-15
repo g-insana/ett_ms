@@ -36,16 +36,16 @@ but you will need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) 
 Binaries can be downloaded from the [releases tab of the tfastx github](https://github.com/wrpearson/fasta36/releases)
 or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
 
-The R scripts under `figures_code` require the libraries detailed in the [figures_code README](figures_code/README.md).
+The R scripts under `figures_code` require the libraries detailed in the [figures code README](figures_code/README.md).
 
 The input data (processed clusters) is available at [zenodo](link) or [figshare](link).
 It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster).
 
 ## DOCUMENTATION
 
-[clustering](https://github.com/g-insana/ProteomeCluster/blob/main/README.md)
-[analysis](analysis_code/README.md)
-[figures](figures_code/README.md)
+- [clustering](https://github.com/g-insana/ProteomeCluster/blob/main/README.md)
+- [analysis](analysis_code/README.md)
+- [figures](figures_code/README.md)
 
 
 ## LINKS
