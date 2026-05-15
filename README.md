@@ -23,49 +23,41 @@ High “outlier” clusters are concentrated in a small fraction of proteomes, w
 the ∼5% of proteomes that are excluded from the core (50% participation) cluster set encode the missing protein more than 98% of the time; these proteins were missed because
 of frameshifts in the genome sequence. MMseqs2 clustering with 50% participation provides robust sets of core bacterial proteins.
 
-# Contents of the repository
+## Contents of the repository
 ```
 analysis_code/      # bash and python scripts to perform the analysis
 figures_code/       # datafiles and .R code to recreate the figures in the manuscript
 ```
 
-## INSTALLATION
-- git clone the repository: 
+## Requirements
 
-```git clone https://github.com/g-insana/ett_ms.git``` 
-
-- install requirements (virtual environment is optional but recommended) via pip or conda/mamba:
-
-via pip:
-```
-cd ett_ms && python3 -m venv venv_ett
-source venv_ett/bin/activate
-pip3 install -r requirements.txt
-```
-
-via conda or mamba:
-```
-cd ett_ms && mamba create --name ett --file requirements.txt --channel conda-forge
-mamba activate ett
-```
-
-**Note** that you also need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) program for the protein vs dna searches.
+The python scripts under `analysis_code/` do not require any module which is not already included in the standard library,
+but you will need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) program to run protein vs dna searches.
 Binaries can be downloaded from the [releases tab of the tfastx github](https://github.com/wrpearson/fasta36/releases)
 or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
 
-## COMMAND LINE USAGE
+The R scripts under `figures_code` require the libraries detailed in the [figures_code README](figures_code/README.md).
+
+The input data (processed clusters) is available at [zenodo](link) or [figshare](link).
+It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster).
 
 ## DOCUMENTATION
 
+[clustering](https://github.com/g-insana/ProteomeCluster/blob/main/README.md)
+[analysis](analysis_code/README.md)
+[figures](figures_code/README.md)
+
+
 ## LINKS
 
+- [MMseqs2](https://github.com/soedinglab/MMseqs2)
 - [clustering pipeline](https://github.com/g-insana/ProteomeCluster)
 - input dataset (Zenodo/Figshare dataset)
-- biorxiv preprint
+- biorxiv preprint (coming soon)
 
 ## CITATION
 
-If you find this software useful, please consider citing our [paper](link_to_biorxiv)
+If you find this software useful, please consider citing our [paper](coming_soon):
 
 ``` 
 Insana, G., Martin, M.J. & Pearson, W.R.
