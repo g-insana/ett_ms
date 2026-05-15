@@ -6,7 +6,7 @@ Early terminated transcripts and missing proteins reflect artifacts in bacterial
 
 This file outlines the mapping between the files produced by the
 various cluster analysis scripts, and the figures in the papers.  The
-scripts used to summarize the cluster data are provided in the `./analysis_code` directory.
+scripts used to summarize the cluster data are provided in the `../analysis_code` directory.
 
 ## figures_code files:
 
