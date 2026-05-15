@@ -19,8 +19,6 @@
 
 library('ggplot2')
 library('stringr')
-## library(tidyr)
-## library(cowplot)
 library('patchwork')
 library('yaml')
 library('getopt')

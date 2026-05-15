@@ -9,7 +9,7 @@
 ## explain==TRUE
 ##
 
-library("dplyr")
+library('dplyr')
 
 check_column_values <- function(df, col_name, cond_vector, effect, description, explain) {
 

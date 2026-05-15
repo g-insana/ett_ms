@@ -9,11 +9,8 @@
 ##
 ## 
 
-library('ggplot2')
-library(dplyr)
-library(purrr)
-## library(cowplot)
-library(RColorBrewer)
+library('dplyr')
+library('purrr')
 library('optparse')
 library('yaml')
 library('xtable')

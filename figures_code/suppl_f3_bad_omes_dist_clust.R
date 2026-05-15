@@ -13,10 +13,8 @@
 
 library('ggplot2')
 library('ggtext')
-## library(tidyr)
 library('dplyr')
 library('forcats')  ## for fct_relevel
-## library(cowplot)
 library('RColorBrewer')
 library('patchwork')
 library('getopt')

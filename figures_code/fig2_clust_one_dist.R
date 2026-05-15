@@ -24,12 +24,9 @@ library('ggtext')
 library('optparse')
 library('yaml')
 library('dplyr')
-library(purrr)
-library(RColorBrewer)
+library('purrr')
+library('RColorBrewer')
 library('patchwork')
-## library('showtext')
-library('Cairo')
-library('extrafont')
 
 get_yaml_file = 'get_yaml_opts.R'
 

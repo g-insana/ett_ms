@@ -14,9 +14,7 @@
 library('ggplot2')
 library('ggtext')
 library('stringr')
-## library(tidyr)
 library('forcats')  ## for fct_relevel
-## library(cowplot)
 library('RColorBrewer')
 library('patchwork')
 library('getopt')

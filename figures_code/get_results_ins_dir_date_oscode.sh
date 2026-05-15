@@ -35,6 +35,8 @@ for os in $* ; do
 
     ## get Pearson files:
     scp -p pearson@codon_m:${os_dir}/${os}_proteome.stats .
+    ## cluster length files
+    scp -p pearson@codon_m:${os_dir}/${os}_clust_proteome_lens.samp_2B .
     ## tfx short protein files
     scp -p pearson@codon_m:${os_dir}/${os}_bad_omes_2000.tfxg_stats_\* .
     ## missing prot tfx files

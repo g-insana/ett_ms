@@ -29,9 +29,9 @@ echo "suppl_fig1:: $BIN_DIR/suppl_f1_omes_stats_qual6p.R -Y $YAML/clust_omes_sta
 $BIN_DIR/suppl_f1_omes_stats_qual6p.R -Y $YAML/clust_omes_stats_20_cm0.yaml --stats yields.tsv $PUB_STR --pdf suppl_f1_omes_stats6_cm0_pub.pdf
 ##ln -s -f `pwd`/suppl_f4_omes_stats6_cm0_pub.pdf ../figs
 
-echo "suppl_fig2 (miss) $BIN_DIR/suppl_f2_miss_stats.R -Y ../yaml/miss_omes.yaml $PUB_STR --pdf supp_f2_miss_summ_r3_pub.pdf"
-$BIN_DIR/suppl_f2_miss_stats.R -Y ../yaml/miss_omes.yaml $PUB_STR --pdf supp_f2_miss_summ_r3_pub.pdf
-##ln -s -f `pwd`/supp_f2_miss_summ_r3_pub.pdf ../figs
+echo "suppl_fig2 (miss) $BIN_DIR/suppl_f2_miss_stats.R -Y ../yaml/miss_omes.yaml $PUB_STR --pdf suppl_f2_miss_summ_r3_pub.pdf"
+$BIN_DIR/suppl_f2_miss_stats.R -Y ../yaml/miss_omes.yaml $PUB_STR --pdf suppl_f2_miss_summ_r3_pub.pdf
+##ln -s -f `pwd`/suppl_f2_miss_summ_r3_pub.pdf ../figs
 
 ## suppl figure 3 -- distribution of outliers across proteomes
 echo "suppl_fig5:: $BIN_DIR/suppl_f3_bad_omes_dist_clust.R -Y $YAML/bad_omes_3bad_clust2B_cm0.yaml --stats yields.tsv --pdf suppl_f3_omes_dist_lens_cm0.pdf"

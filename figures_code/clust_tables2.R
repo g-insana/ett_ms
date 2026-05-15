@@ -12,12 +12,9 @@
 ## OSCODE N_good_clust N_out_50 N_out_75 N_out_95 %_out_50 %_out_75 %_out_95
 ##
 
-library('ggplot2')
-library(dplyr)
-library(purrr)
+library('dplyr')
+library('purrr')
 library('stringr')
-## library(cowplot)
-library(RColorBrewer)
 library('optparse')
 library('yaml')
 library('xtable')
