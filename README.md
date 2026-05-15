@@ -57,7 +57,7 @@ It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [Pro
 
 ## CITATION
 
-If you find this software useful, please consider citing our [paper](coming_soon):
+If you find this software useful, please consider citing our paper (coming soon):
 
 ``` 
 Insana, G., Martin, M.J. & Pearson, W.R.
