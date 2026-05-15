@@ -2,7 +2,7 @@
 ## ett_ms/analysis_code
 
 This directory provides all of the scripts that were used to analyze the data for the paper:
-Early terminated trasnscripts and missing proteins reflect artifacts in bacterial proteomes.
+Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes.
 
 This file outlines the mapping between the files produced by the
 various cluster analysis scripts, and the figures in the papers.  The
@@ -44,7 +44,7 @@ clusters those proteomes contribute to.
 
 3. the `proteome_stats5slm3.py` script produces an
 `OSCODE....short_tfx_ex` file that contains up to 2000 examples of
-bothbad (proteomes with bad clusters with many outliers) or sampled
+both bad (proteomes with bad clusters with many outliers) or sampled
 proteomes.  The `.short_tfx_ex` files include ENA genome IDs
 (`GCA_1235567.1`) and a set of short outlier proteins from that
 proteome/genome, and a set of mode-length proteins from the same
