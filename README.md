@@ -3,9 +3,6 @@
 This repository contains the code for the analysis and figures of the manuscript:
 ## Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
 
-Note that the code for the clustering of proteomes and processing of the clusters is available in another repository: [ProteomeCluster](https://github.com/g-insana/ProteomeCluster)
-
-
 # Abstract
 
 MMseqs2 clustering was used to examine the uniformity and heterogeneity of proteomes from 20 bacterial species. Using clustering parameters
