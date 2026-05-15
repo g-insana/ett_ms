@@ -1,6 +1,10 @@
 # ett_ms
-Code for the analysis and figures of the manuscript:
+
+This repository contains the code for the analysis and figures of the manuscript:
 ## Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
+
+Note that the code for the clustering of proteomes and processing of the clusters is available in another repository: [ProteomeCluster](https://github.com/g-insana/ProteomeCluster)
+
 
 # Abstract
 
@@ -55,11 +59,11 @@ or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/
 
 ## LINKS
 
-(to Zenodo/Figshare datasets)
-(to biorxiv preprint)
+- [clustering pipeline](https://github.com/g-insana/ProteomeCluster)
+- input dataset (Zenodo/Figshare dataset)
+- biorxiv preprint
 
 ## CITATION
-
 
 If you find this software useful, please consider citing our [paper](link_to_biorxiv)
 
