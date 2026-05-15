@@ -36,6 +36,7 @@ or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/
 The R scripts under `figures_code` require the libraries detailed in the [figures code README](figures_code/README.md).
 
 The input data (processed clusters) is available at [zenodo](link) or [figshare](link).
+
 It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster) [v1.0.0](https://doi.org/10.5281/zenodo.20208647).
 
 ## DOCUMENTATION
@@ -49,7 +50,7 @@ It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [Pro
 
 - [MMseqs2](https://github.com/soedinglab/MMseqs2)
 - [clustering pipeline](https://github.com/g-insana/ProteomeCluster)
-- input dataset (Zenodo/Figshare dataset)
+- input dataset at [Zenodo](https://doi.org/10.5281/zenodo.20208872)
 - biorxiv preprint (coming soon)
 
 ## CITATION
