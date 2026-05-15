@@ -2,7 +2,7 @@
 ## ett_ms/figures_code
 
 This directory provides all the 'R'-scripts that were used to make the figures for the paper:
-Early terminated trasnscripts and missing proteins reflect artifacts in bacterial proteomes.
+Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes.
 
 This file outlines the mapping between the files produced by the
 various cluster analysis scripts, and the figures in the papers.  The
