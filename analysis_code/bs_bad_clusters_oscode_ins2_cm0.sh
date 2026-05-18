@@ -9,7 +9,7 @@ do_tfastx=1
 do_miss=1
 
 if [[ -z "$DATA_DIR" ]]; then
-    data_dir=outdir9
+    data_dir=data
 else
     data_dir=$DATA_DIR
 fi
@@ -33,19 +33,19 @@ else
 fi
 
 if [[ -z "$FA_DIR" ]]; then
-    fa_dir=fasta9_incsurv
+    fa_dir=fasta
 else
     fa_dir=$FA_DIR
 fi
 
 echo "using: bs_ett_dir: $bs_ett_dir data_dir: $data_dir data_ext: $data_ext data_date: $data_date fa_dir: $fa_dir"
 
-export INS_PROT=/homes/insana/ett2/${data_dir}_${data_ext}
-export ETT_BIN=/homes/pearson/ett/ett_ms/analysis_code
-export TMP_DIR=/homes/pearson/$bs_ett_dir/${data_dir}_${data_ext}
+export INS_PROT=data/${data_dir}_${data_ext}
+export ETT_BIN=./
+export TMP_DIR=/tmp/$bs_ett_dir/${data_dir}_${data_ext}
 
 if [[ ! -d $TMP_DIR ]]; then
-    mkdir $TMP_DIR
+    mkdir -p $TMP_DIR
 fi
 
 proteome_stats_bin=proteome_stats5slm4.py
