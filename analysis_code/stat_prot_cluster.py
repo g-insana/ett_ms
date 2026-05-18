@@ -453,7 +453,7 @@ def main():
                 missed_cluster_set = all_cluster_set - proteome_stats[missed_prot_keys[s_ix]]['clust_set']
 
                 missed_cluster_list = [ x for x in missed_cluster_set]
-                for clust_id in random.sample(missed_cluster_list,args.miss_samp_ex2):
+                for clust_id in random.sample(missed_cluster_list, min(args.miss_samp_ex2, len(missed_cluster_list))):
                     this_cluster = all_cluster_data[clust_id]
                     if (this_cluster['mode_len'] >= 200):
                         print('\t'.join([clust_id,this_cluster['mode_protein'],str(this_cluster['mode_len'])]),file=miss_samp_fd)

@@ -25,7 +25,12 @@ import os
 import subprocess
 import argparse
 
-BIN_DIR="/homes/pearson/ett"
+BIN_DIR=os.getenv('ETT_BIN')
+
+if BIN_DIR is None:
+    print(" ERROR: ETT_BIN not defined. Have you sourced env.sh?", file=sys.stderr)
+    sys.exit(1)
+
 
 def check_args(test_args=None):
     """
@@ -92,6 +97,7 @@ def run_query(mode_prot_list, bad_prot_list, cluster_id, fa_dir, taxon,  run_fla
         if (not have_mode_file):
             cmd_str = f'{BIN_DIR}/{down_script} {fa_dir} {taxon} \'{mode_prot_id}\' > {mode_file_name}'
             if (run_flag):
+                print(cmd_str)
                 os.system(cmd_str)
             else:
                 print(cmd_str)

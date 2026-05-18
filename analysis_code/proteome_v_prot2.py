@@ -23,7 +23,12 @@ import os
 import subprocess
 import argparse
 
-BIN_DIR="/homes/pearson/ett"
+BIN_DIR=os.getenv('ETT_BIN')
+
+if BIN_DIR is None:
+    print(" ERROR: ETT_BIN not defined. Have you sourced env.sh?", file=sys.stderr)
+    sys.exit(1)
+
 
 def check_args(test_args=None):
     """
