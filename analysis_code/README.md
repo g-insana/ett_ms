@@ -6,7 +6,7 @@ Early terminated transcripts and missing proteins reflect artifacts in bacterial
 
 This file outlines the mapping between the files produced by the
 various cluster analysis scripts, and the figures in the papers.  The
-'R' code used to produce the figures is provided in the `./figures_code` directory
+'R' code used to produce the figures is provided in the `../figures_code` directory
 
 ## Overall analysis strategy.
 
