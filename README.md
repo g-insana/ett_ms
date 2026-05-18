@@ -33,6 +33,8 @@ but you will need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) 
 Binaries can be downloaded from the [releases tab of the tfastx github](https://github.com/wrpearson/fasta36/releases)
 or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
 
+Furthermore, in order to index and extract fasta sequences from proteome files, the scripts depend on [ffdb.py](https://github.com/g-insana/ffdb.py) [v2.5.7](https://doi.org/10.5281/zenodo.11113490).
+
 The R scripts under `figures_code` require the libraries detailed in the [figures code README](figures_code/README.md).
 
 The input data (processed clusters) is available at [Zenodo](https://doi.org/10.5281/zenodo.20208872) or [Figshare](https://doi.org/10.6084/m9.figshare.32301477).
