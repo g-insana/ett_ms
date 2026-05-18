@@ -29,8 +29,8 @@ figures_code/       # datafiles and .R code to recreate the figures in the manus
 ## Requirements
 
 The python scripts under `analysis_code/` do not require any module which is not already included in the standard library,
-but you will need to have the [`tfastx`](https://github.com/wrpearson/fasta36/) program to run protein vs dna searches.
-Binaries can be downloaded from the [releases tab of the tfastx github](https://github.com/wrpearson/fasta36/releases)
+but you will need to have the `tfastx` program from [FASTA36](https://github.com/wrpearson/fasta36/) to run protein vs dna searches.
+Binaries for `tfastx` can be downloaded from the [releases tab of the FASTA36 github](https://github.com/wrpearson/fasta36/releases)
 or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
 
 Furthermore, in order to index and extract fasta sequences from proteome files, the scripts depend on [ffdb.py](https://github.com/g-insana/ffdb.py) [v2.5.7](https://doi.org/10.5281/zenodo.11113490).
@@ -50,9 +50,10 @@ It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [Pro
 
 ## LINKS
 
-- [MMseqs2](https://github.com/soedinglab/MMseqs2)
-- [ffdb](https://github.com/g-insana/ffdb.py)
-- [clustering pipeline](https://github.com/g-insana/ProteomeCluster)
+- [MMseqs2](https://github.com/soedinglab/MMseqs2) search and clustering suite
+- [FASTA36](https://github.com/wrpearson/fasta36) sequence search and comparison software
+- [ffdb](https://github.com/g-insana/ffdb.py) nosql single file database
+- [ProteomeCluster](https://github.com/g-insana/ProteomeCluster) clustering pipeline
 - input dataset at [Zenodo](https://doi.org/10.5281/zenodo.20208872) or [Figshare](https://doi.org/10.6084/m9.figshare.32301477)
 - biorxiv preprint (coming soon)
 
