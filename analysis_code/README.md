@@ -31,7 +31,7 @@ clusters those proteomes contribute to.
 
 - Fig. 1 is produced from the `OSCODE...bad_clust` files, which is produced by `proteome_stats5slm4.py`
 
-- Suppl. Fig. 1 is produced from the OSCODE_proteome.stats` files, which are produced by `stat_prot_cluster.py`.
+- Suppl. Fig. 1 is produced from the `OSCODE_proteome.stats` files, which are produced by `stat_prot_cluster.py`.
 
 - Suppl. Fig 2 is produced from the `OSCODE_miss_tfxg.summ_r3` files, which are produced by `track_missing_prots2.py`, `genome_v_prot2.py`, and `parse_tfxg3s.py`.
 
