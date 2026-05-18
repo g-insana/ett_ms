@@ -1,9 +1,9 @@
 # ett_ms
 
 This repository contains the code for the analysis and figures of the manuscript:
-## Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
+# Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
 
-# Abstract
+## Abstract
 
 MMseqs2 clustering was used to examine the uniformity and heterogeneity of proteomes from 20 bacterial species. Using clustering parameters
 that required 50% sequence overlap, clusters with proteins from ≥50% of proteomes typically contain proteins from 95% of the proteomes and capture
