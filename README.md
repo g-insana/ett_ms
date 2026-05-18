@@ -51,6 +51,7 @@ It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [Pro
 ## LINKS
 
 - [MMseqs2](https://github.com/soedinglab/MMseqs2)
+- [ffdb](https://github.com/g-insana/ffdb.py)
 - [clustering pipeline](https://github.com/g-insana/ProteomeCluster)
 - input dataset at [Zenodo](https://doi.org/10.5281/zenodo.20208872) or [Figshare](https://doi.org/10.6084/m9.figshare.32301477)
 - biorxiv preprint (coming soon)
