@@ -29,8 +29,8 @@ figures_code/       # datafiles and .R code to recreate the figures in the manus
 ## Requirements
 
 The python scripts under `analysis_code/` do not require any module which is not already included in the standard library,
-but you will need to have the `tfastx` program from [FASTA36](https://github.com/wrpearson/fasta36/) to run protein vs dna searches.
-Binaries for `tfastx` can be downloaded from the [releases tab of the FASTA36 github](https://github.com/wrpearson/fasta36/releases)
+but you will need to have the binaries from the [FASTA36](https://github.com/wrpearson/fasta36/) suite to run protein vs dna and protein vs protein searches.
+The binaries can be downloaded from the [releases tab of the FASTA36 github](https://github.com/wrpearson/fasta36/releases)
 or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/fasta/fasta36).
 
 Furthermore, in order to index and extract fasta sequences from proteome files, the utility scripts installed with [ffdb.py](https://github.com/g-insana/ffdb.py) [v2.5.7](https://doi.org/10.5281/zenodo.11113490) are needed.
