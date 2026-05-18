@@ -9,6 +9,7 @@ rm data.zip
 mkdir -p data
 mv yields.tsv *.zip data/  
 (cd data && for i in *.zip; do unzip $i; done)
+find data -type f -name "*.gz" -exec gunzip {} \;
 rm data/*.zip
 mkdir -p fasta
 ./env.sh
