@@ -19,6 +19,10 @@ As with “short-outlier” proteins, the ∼5% of proteomes missing from the co
 ```
 analysis_code/      # bash and python scripts to perform the analysis
 figures_code/       # datafiles and .R code to recreate the figures in the manuscript
+data/               # location for data files and test data
+fetch_datasets.sh   # script to download and uncompress the datasets
+env.sh              # script to setup environment variables to run the analysis
+testrun.sh          # script to run a mini test analysis to ensure requirements are met and code is functional
 ```
 
 ## Requirements
