@@ -6,11 +6,9 @@ wget -O data.zip https://zenodo.org/api/records/20208872/files-archive
 echo "Uncompressing..."
 unzip data.zip
 rm data.zip
-mkdir -p data
 mv yields.tsv *.zip data/  
 (cd data && for i in *.zip; do unzip $i; done)
 find data -type f -name "*.gz" -exec gunzip {} \;
 rm data/*.zip
-mkdir -p outdir
 source env.sh
-echo "Setup Completed"
+echo "Data downloaded and extracted"
