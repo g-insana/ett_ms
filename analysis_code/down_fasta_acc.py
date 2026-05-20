@@ -21,7 +21,7 @@ import urllib.request
 import ssl
 
 API_UPI = "https://rest.uniprot.org/uniparc/{upi}.fasta"
-API_PID = "https://rest.uniprot.org/uniparc/stream?format=fasta&query=(dbid:{pid})"
+API_PID = "https://rest.uniprot.org/uniparc/search?format=fasta&query=(dbid:{pid})&size=1"
 
 def fetch_url(url, timeout=30):
     ctx = ssl.create_default_context()
