@@ -1,8 +1,9 @@
 # ett_ms
+[![DOI](https://zenodo.org/badge/1224686730.svg)](https://doi.org/10.5281/zenodo.20313420)
 
 This repository contains the code for the analysis and figures of the manuscript:
 # Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
-[10.64898/2026.05.19.725897](https://doi.org/10.64898/2026.05.19.725897)
+[(doi 10.64898/2026.05.19.725897)](https://doi.org/10.64898/2026.05.19.725897)
 
 ## Abstract
 
