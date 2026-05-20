@@ -59,9 +59,8 @@ A few proteomes have been provided under `data/TEST/proteomes/` to run the test.
 - [bioRxiv preprint](https://doi.org/10.64898/2026.05.19.725897)
 - [MMseqs2](https://github.com/soedinglab/MMseqs2) search and clustering suite
 - [FASTA36](https://github.com/wrpearson/fasta36) sequence search and comparison software
-- [ffdb](https://github.com/g-insana/ffdb.py) nosql single file database
 - [ProteomeCluster](https://github.com/g-insana/ProteomeCluster) clustering pipeline
-- input dataset at [Zenodo](https://doi.org/10.5281/zenodo.20208872) or [Figshare](https://doi.org/10.6084/m9.figshare.32301477)
+- input datasets at [Zenodo](https://doi.org/10.5281/zenodo.20208872) or [Figshare](https://doi.org/10.6084/m9.figshare.32301477)
 
 ## CITATION
 
