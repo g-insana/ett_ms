@@ -50,7 +50,7 @@ def check_args(test_args=None):
         "--script",
         dest='down_script',
         type=str,
-        default='down_fasta_acc.sh'
+        default='down_fasta_acc.py'
         )
 
     parser.add_argument(

@@ -84,16 +84,16 @@ for OSCODE in $*; do
     if [[ $do_tfastx == 1 ]]; then
 	## do the .tfx searches
 	rm -f ${OSCODE}_bad_omes_2000.tfxg_stats_BHL3ss ${OSCODE}_bad_omes_2000.tfxg_stats_S1K3ss
-	${ETT_BIN}/genome_v_prot2.py --script down_fasta_acc.sh --oscode $OSCODE $tfx_ex_file
-	## genome_v_prot2.py needs down_fasta_acc.sh, 
+	${ETT_BIN}/genome_v_prot2.py --script down_fasta_acc.py --oscode $OSCODE $tfx_ex_file
+	## genome_v_prot2.py needs down_fasta_acc.py, 
 
 	echo "$OSCODE genome_v_prot2.py short done" `date`
 
 	## now do the short vs mode ssearch
 	rm -f ${OSCODE}_cl_*_short.ss_MD10
   echo "short vs mode"
-	echo "${ETT_BIN}/short_prot_v_mode2.py --script down_fasta_acc.sh --oscode $OSCODE --run $tfx_ex_file"
-	${ETT_BIN}/short_prot_v_mode2.py --script down_fasta_acc.sh --oscode $OSCODE --run $tfx_ex_file
+	echo "${ETT_BIN}/short_prot_v_mode2.py --script down_fasta_acc.py --oscode $OSCODE --run $tfx_ex_file"
+	${ETT_BIN}/short_prot_v_mode2.py --script down_fasta_acc.py --oscode $OSCODE --run $tfx_ex_file
 
 	echo "$OSCODE short_prot_v_mode2.py short done" `date`
 
@@ -114,13 +114,13 @@ for OSCODE in $*; do
 	${ETT_BIN}/track_missing_prots2.py --miss_fract=0.67 -P $map_file ${clusters_file} > ${OSCODE}_miss_prots.miss_tfx_ex_r3
 
 	rm -f *.miss_tfx_r3
-	${ETT_BIN}/genome_v_prot2.py --script down_fasta_acc.sh --oscode $OSCODE --suff miss_tfx_r3 ${OSCODE}_miss_prots.miss_tfx_ex_r3
+	${ETT_BIN}/genome_v_prot2.py --script down_fasta_acc.py --oscode $OSCODE --suff miss_tfx_r3 ${OSCODE}_miss_prots.miss_tfx_ex_r3
 
 	${ETT_BIN}/parse_tfxg3s.py *.miss_tfx_r3 > ${OSCODE}_miss_tfxg.summ_r3
 
 	echo "$OSCODE missing protein tfx search done"
 
-	${ETT_BIN}/proteome_v_prot2.py -P $map_file --script down_fasta_acc.sh --oscode $OSCODE --suff miss_ok2_r3 ${OSCODE}_miss_prots.miss_tfx_ex_r3
+	${ETT_BIN}/proteome_v_prot2.py -P $map_file --script down_fasta_acc.py --oscode $OSCODE --suff miss_ok2_r3 ${OSCODE}_miss_prots.miss_tfx_ex_r3
 
 	${ETT_BIN}/parse_fa36.py *.miss_ok2_r3 > ${OSCODE}_pmiss_ok2.summ_r3
 
