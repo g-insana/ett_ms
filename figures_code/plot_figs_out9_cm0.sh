@@ -1,14 +1,14 @@
 #!/bin/sh
 
-## plot_figs_cm0.sh (run in results)
+## plot_figs_cm0.sh
 
 ## modified 7-April-2026 to get proteome/cluster statistics from outdir8_incsurv_cm0.tsv
 ## 
 
-BIN_DIR=../
+BIN_DIR=./
 
 PUB_STR="--pub"
-export YAML=../yaml
+export YAML=./yaml
 
 ## figure 1 -- cluster qualities across 20 taxa
 echo "fig1:: $BIN_DIR/clust_tot_qual_all5r.R -Y $YAML/clust_lens_20_cm0.yaml --pdf f1_clust_stat_cm0.pdf"
@@ -63,9 +63,9 @@ $BIN_DIR/suppl_f7_align_props_box5p.R -Y $YAML/align_20_short.yaml --stats yield
 ##ln -s -f `pwd`/suppl_f7_align20_short_box_cm0_pub.pdf ../figs
 
 echo ""
-echo "table1:: ../clust_tables2.R -Y ../yaml/clust_lens_20_cm0.yaml --stats yields.tsv --table1 clust_info.tb1.tex --table2 clust_info.tb2.tex"
-../clust_tables2.R -Y ../yaml/clust_lens_20_cm0.yaml --stats yields.tsv --table1 clust_info.tb1.tex
+echo "table1:: $BIN_DIR/clust_tables2.R -Y $YAML/clust_lens_20_cm0.yaml --stats yields.tsv --table1 clust_info.tb1.tex --table2 clust_info.tb2.tex"
+$BIN_DIR/clust_tables2.R -Y $YAML/clust_lens_20_cm0.yaml --stats yields.tsv --table1 clust_info.tb1.tex
 
 echo ""
-echo "suppl table1:: ../clust_table_suppl.R --file=yields.tsv --supp_table1 ett_suppl_tbl1_outdir9_cm0.tex"
-../clust_table_suppl.R --file=yields.tsv --supp_table1 ett_suppl_tbl1_outdir9_cm0.tex
+echo "suppl table1:: $BIN_DIR/clust_table_suppl.R --file=yields.tsv --supp_table1 ett_suppl_tbl1_outdir9_cm0.tex"
+$BIN_DIR/clust_table_suppl.R --file=yields.tsv --supp_table1 ett_suppl_tbl1_outdir9_cm0.tex
