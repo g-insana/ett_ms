@@ -90,6 +90,4 @@ $ETT_BIN/bs_bad_clusters_oscode_ins2_cm0.sh OSCODE
 
 `$ETT_BIN/bs_bad_clusters_oscode_ins2_cm0.sh $(cat analysis_code/oscodes20)` runs the analysis for all 20 bacteria.
 
-Note that cluster information needs to be downloaded and unpacked. a script in the main directory (`fetch_datasets.sh`) can be used for that purpose.
-
-Proteome files also need to be present, to run the searches, these can be prepared and downloaded to `proteomes/` named subfolders under each `OSCODE/` directory, using either upid or gca_set_acc information present in the `OSCODE/OSCODE.proteomes.tsv` files.
+Please see the Requirements section in the [`../README`](../README.md) for how to obtain the data.
