@@ -39,12 +39,13 @@ The input data (processed clusters) is available at [Zenodo](https://doi.org/10.
 It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster) [v1.0.0](https://doi.org/10.5281/zenodo.20208647) and
 needs to be downloaded and unpacked. A script in the main directory (`fetch_datasets.sh`) can be used for that purpose.
 
-Proteome files also need to be present, in order to run the searches of the analysis. These can be downloaded to `proteomes/` named subfolders under each `OSCODE/` directory, using either the `upid` or the `gca_set_acc` information present in the `OSCODE/OSCODE.proteomes.tsv` files. A few proteomes have been provided under `data/TEST/proteomes/`
-For example, to download the fasta file of the proteome with upid `UP000434630`, the following API call could be used:
+Proteome files in FASTA format also need to be present, if you'd like to re-run the sequence searches. These can be downloaded to `proteomes/` named subfolders under each `OSCODE/` directory, using either the `upid` or the `gca_set_acc` information present in the `OSCODE/OSCODE.proteomes.tsv` files.
+For example, to download the sequence file for the proteome with upid `UP000434630` and save it as `proteome_4348828.fa`, the following command could be used:
 ```
-https://rest.uniprot.org/uniparc/proteome/UP000434630/stream?compressed=true&format=fasta
+wget -O data/SHIFL/proteomes/proteome_4348828.fa.gz "https://rest.uniprot.org/uniparc/proteome/UP000434630/stream?compressed=true&format=fasta"
+gunzip data/SHIFL/proteomes/proteome_4348828.fa.gz
 ```
-
+A few proteomes have been provided under `data/TEST/proteomes/` to run the test.
 
 ## DOCUMENTATION
 
