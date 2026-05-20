@@ -40,6 +40,6 @@ for os in $* ; do
     ## tfx short protein files
     ln -sf ${os_dir}/${os}_bad_omes_2000.tfxg_stats_* .
     ## missing prot tfx files
-    ln -s ${os_dir}/${os}_miss_tfxg.summ_r3 .
+    ln -sf ${os_dir}/${os}_miss_tfxg.summ_r3 .
 
 done
