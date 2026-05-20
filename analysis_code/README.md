@@ -72,10 +72,24 @@ the results written to files: `OSCODE_bad_omes_2000.tfxg_stats_BHL3ss`
   using the sampled data from all 20 bacteria
   (`OSCODE_bad_omes_2000.tfxg_stats_S1K3ss`) and the `suppl_f7_align_props_box5p.R` script.
 
+
+## How to run
+
 The `bs_bad_clusters_oscode_ins2_cm0.sh` script runs all the necessary scripts.
 
-`run_outdir9_incsurv_cm0.sh` sets up the necessary environment variables so that `bs_bad_clusters_oscode_ins2_cm0.sh` runs properly.
+Suggested operation:
+```
+source env.sh
+mkdir -p outdir
+$ETT_BIN/bs_bad_clusters_oscode_ins2_cm0.sh OSCODE
+```
 
-`run_outdir9_incsurv_cm0.sh OSCODE` runs analysis for one bacteria.
+(`env.sh` sets up the necessary environment variables so that `bs_bad_clusters_oscode_ins2_cm0.sh` can run properly)
 
-`run_outdir9_incsurv_cm0.sh $(cat oscodes20)` runs the analysis for all 20 bacteria.
+`$ETT_BIN/bs_bad_clusters_oscode_ins2_cm0.sh OSCODE` runs the analysis for one bacteria.
+
+`$ETT_BIN/bs_bad_clusters_oscode_ins2_cm0.sh $(cat analysis_code/oscodes20)` runs the analysis for all 20 bacteria.
+
+Note that cluster information needs to be downloaded and unpacked. a script in the main directory (`fetch_datasets.sh`) can be used for that purpose.
+
+Proteome files also need to be present, to run the searches, these can be prepared and downloaded to `proteomes/` named subfolders under each `OSCODE/` directory, using either upid or gca_set_acc information present in the `OSCODE/OSCODE.proteomes.tsv` files.
