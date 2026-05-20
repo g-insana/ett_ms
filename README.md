@@ -36,8 +36,15 @@ or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/
 The R scripts under `figures_code` require the libraries detailed in the [figures code README](figures_code/README.md).
 
 The input data (processed clusters) is available at [Zenodo](https://doi.org/10.5281/zenodo.20208872) or [Figshare](https://doi.org/10.6084/m9.figshare.32301477).
+It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster) [v1.0.0](https://doi.org/10.5281/zenodo.20208647) and
+needs to be downloaded and unpacked. A script in the main directory (`fetch_datasets.sh`) can be used for that purpose.
 
-It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster) [v1.0.0](https://doi.org/10.5281/zenodo.20208647).
+Proteome files also need to be present, in order to run the searches of the analysis. These can be downloaded to `proteomes/` named subfolders under each `OSCODE/` directory, using either the `upid` or the `gca_set_acc` information present in the `OSCODE/OSCODE.proteomes.tsv` files. A few proteomes have been provided under `data/TEST/proteomes/`
+For example, to download the fasta file of the proteome with upid `UP000434630`, the following API call could be used:
+```
+https://rest.uniprot.org/uniparc/proteome/UP000434630/stream?compressed=true&format=fasta
+```
+
 
 ## DOCUMENTATION
 
