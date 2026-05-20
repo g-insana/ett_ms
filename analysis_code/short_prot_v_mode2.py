@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-## modified 18-April-2026 to include fa_dir: fasta10_incsurv
-##
-
-## short_prot_v_mode2.py --fa_dir fasta10_incsurv --oscode ECOLA ECOLA_c.....tfx_ex2
+## short_prot_v_mode2.py --oscode ECOLA ECOLA_c.....tfx_ex2
 ## take a file of the form
 
 ## a derivative of long_protein_v_mode.py, that works with a slightly different format file:
@@ -49,13 +46,6 @@ def check_args(test_args=None):
         )
 
     parser.add_argument(
-        "--fa_dir",
-        dest='fa_dir',
-        type=str,
-        default='fasta10_incsurv'
-        )
-
-    parser.add_argument(
         "--run",
         dest='run_flag',
         action='store_true',
@@ -76,7 +66,7 @@ def check_args(test_args=None):
 
     return parser.parse_args()
 
-def run_query(mode_prot_list, bad_prot_list, cluster_id, fa_dir, taxon,  run_flag, down_script):
+def run_query(mode_prot_list, bad_prot_list, cluster_id, taxon, run_flag, down_script):
 
     # (1) get the sequences
     if (len(mode_prot_list) <= 0):
@@ -95,7 +85,7 @@ def run_query(mode_prot_list, bad_prot_list, cluster_id, fa_dir, taxon,  run_fla
         ## extract the mode protein
         have_mode_file = os.path.exists(mode_file_name) and (os.path.getsize(mode_file_name)>0)
         if (not have_mode_file):
-            cmd_str = f'{BIN_DIR}/{down_script} {fa_dir} {taxon} \'{mode_prot_id}\' > {mode_file_name}'
+            cmd_str = f'{BIN_DIR}/{down_script} \'{mode_prot_id}\' > {mode_file_name}'
             if (run_flag):
                 os.system(cmd_str)
             else:
@@ -104,7 +94,7 @@ def run_query(mode_prot_list, bad_prot_list, cluster_id, fa_dir, taxon,  run_fla
         ## extract the bad protein
         have_bad_file = os.path.exists(bad_file_name) and (os.path.getsize(bad_file_name)>0)
         if (not have_bad_file):
-            cmd_str = f'{BIN_DIR}/{down_script} {fa_dir} {taxon} \'{bad_prot_id}\' > {bad_file_name}'
+            cmd_str = f'{BIN_DIR}/{down_script} \'{bad_prot_id}\' > {bad_file_name}'
             if (run_flag):
                 os.system(cmd_str)
             else:
@@ -132,7 +122,7 @@ def main():
         if line.startswith('>'):
             ## if have previous set, generate files, do search
             if (gca_ome_id):
-                run_query(mode_prot_list, bad_prot_list, gca_ome_id, args.fa_dir, args.taxon, args.run_flag, args.down_script)
+                run_query(mode_prot_list, bad_prot_list, gca_ome_id, args.taxon, args.run_flag, args.down_script)
 
             (gca_ome_id, n_clust, s_type) = line[1:].strip('\n').split('\t')
 
@@ -147,7 +137,7 @@ def main():
         bad_prot_list.append(bad_acc)
         
     if (gca_ome_id):
-        run_query(mode_prot_list, bad_prot_list, gca_ome_id, args.fa_dir, args.taxon, args.run_flag, args.down_script)
+        run_query(mode_prot_list, bad_prot_list, gca_ome_id, args.taxon, args.run_flag, args.down_script)
 
 if __name__ == "__main__":
 

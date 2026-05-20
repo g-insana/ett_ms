@@ -47,17 +47,10 @@ def check_args(test_args=None):
         )
 
     parser.add_argument(
-        "--fa_dir",
-        dest='fa_dir',
-        type=str,
-        default='fasta10_incsurv'
-        )
-
-    parser.add_argument(
         "--script",
         dest='down_script',
         type=str,
-        default='down_fasta_oscode.sh'
+        default='down_fasta_acc.sh'
         )
 
     parser.add_argument(
@@ -101,7 +94,7 @@ def read_proteome_map(map_file):
 
     return proteome_map
 
-def run_query(gca_acc, prot_ids, fa_dir, taxon, s_type, proteome_map, args):
+def run_query(gca_acc, prot_ids, taxon, s_type, proteome_map, args):
 
     # (1) get the sequences
     if (len(prot_ids) > 0):
@@ -114,7 +107,7 @@ def run_query(gca_acc, prot_ids, fa_dir, taxon, s_type, proteome_map, args):
         q_file_name = f'{query_name}.aa'
 
         if not os.path.exists(q_file_name):
-            cmd_str = f'{BIN_DIR}/{args.down_script} {fa_dir} {taxon} \'{q_acc_str}\' > {q_file_name}'
+            cmd_str = f'{BIN_DIR}/{args.down_script} \'{q_acc_str}\' > {q_file_name}'
             ## print(cmd_str)
             os.system(cmd_str)
 
@@ -136,7 +129,7 @@ def main():
         if line.startswith('>'):
             ## if have previous set, generate files, do search
             if (gca_acc):
-                run_query(gca_acc, prot_ids,args.fa_dir, args.taxon, s_type, proteome_map, args)
+                run_query(gca_acc, prot_ids, args.taxon, s_type, proteome_map, args)
 
             (gca_acc, n_bad_clust, s_type) = line[1:].strip('\n').split('\t')
             prot_ids = []
@@ -151,7 +144,7 @@ def main():
         prot_ids.append(prot_id)
         
     if (gca_acc):
-        run_query(gca_acc, prot_ids, args.fa_dir, args.taxon, s_type, proteome_map, args)
+        run_query(gca_acc, prot_ids, args.taxon, s_type, proteome_map, args)
 
 if __name__ == "__main__":
 
