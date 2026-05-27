@@ -3,7 +3,7 @@
 Fetch FASTA sequences for given accessions.
 
 Usage:
-  python fetch_fasta.py 'AAN45060|502|UPI0000139077' 'AAN45060|502' [...]
+  python fetch_fasta.py 'BAA03575|327|UPI0000139077' 'AAN45060|513' [...]
 
 Behaviour:
 - Input is a single accession or a space-separated list of accessions
