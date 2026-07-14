@@ -7,7 +7,7 @@ This repository contains the code for the analysis and figures of the manuscript
 
 ## Abstract
 
-MMMseqs2 clustering was used to examine the uniformity of proteomes from 20 bacterial species. Clusters with proteins from ≥50% of proteomes typically contain proteins from 95% of the proteomes and capture more than 80% of the proteins in an organism.
+MMseqs2 clustering was used to examine the uniformity of proteomes from 20 bacterial species. Clusters with proteins from ≥50% of proteomes typically contain proteins from 95% of the proteomes and capture more than 80% of the proteins in an organism.
 
 Protein clusters are highly uniform in length; across the 20 bacteria, the median cluster has more than 99% of the proteins at the mode length. In contrast to this uniformity, some clusters contain dozens to hundreds of proteins that are considerably shorter (<75%) than the mode-length, and a few clusters include proteins that are >133% the mode length.
 
@@ -19,12 +19,14 @@ As with “short-outlier” proteins, the ∼5% of proteomes missing from the co
 
 ## Contents of the repository
 ```
-analysis_code/      # bash and python scripts to perform the analysis
-data/               # location for data files and test data
-figures_code/       # datafiles and .R code to recreate the figures in the manuscript
-env.sh              # script to setup environment variables to run the analysis
-fetch_datasets.sh   # script to download and uncompress the datasets
-testrun.sh          # script to run a mini test analysis to ensure requirements are met and code is functional
+analysis_code/        # bash and python scripts to perform the analysis
+data/                 # location for data files and test data
+figures_code/         # datafiles and .R code to recreate the figures in the manuscript
+download_proteomes.py # script to download and uncompress the analysed proteomes for a given species
+env.sh                # script to setup environment variables to run the analysis
+fetch_datasets.sh     # script to download and uncompress the datasets from Zenodo (apparently limited due to size)
+fetch_datasets.py     # script to download and uncompress the datasets from FigShare
+testrun.sh            # script to run a mini test analysis to ensure requirements are met and code is functional
 ```
 
 ## Requirements
@@ -37,16 +39,14 @@ or from the [University of Virginia](https://fasta.bioch.virginia.edu/wrpearson/
 The R scripts under `figures_code` require the libraries detailed in the [figures code README](figures_code/README.md).
 
 The input data (processed clusters) is available at [Zenodo](https://doi.org/10.5281/zenodo.20208872) or [Figshare](https://doi.org/10.6084/m9.figshare.32301477).
-It was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster) [v1.0.0](https://doi.org/10.5281/zenodo.20208647) and
-needs to be downloaded and unpacked. A script in the main directory (`fetch_datasets.sh`) can be used for that purpose.
+The data was produced by [MMseqs2](https://github.com/soedinglab/MMseqs2) via the [ProteomeCluster pipeline](https://github.com/g-insana/ProteomeCluster) [v1.0.0](https://doi.org/10.5281/zenodo.20208647) and
+need to be downloaded and unpacked. A script in the main directory (`fetch_datasets2.py`) can be used for that purpose.
 
 Proteome files in FASTA format also need to be present, if you'd like to re-run the sequence searches. These can be downloaded to `proteomes/` named subfolders under each `OSCODE/` directory, using either the `upid` or the `gca_set_acc` information present in the `OSCODE/OSCODE.proteomes.tsv` files.
-For example, to download the sequence file for the proteome with upid `UP000434630` and save it as `proteome_4348828.fa`, the following command could be used:
-```
-wget -O data/SHIFL/proteomes/proteome_4348828.fa.gz "https://rest.uniprot.org/uniparc/proteome/UP000434630/stream?compressed=true&format=fasta"
-gunzip data/SHIFL/proteomes/proteome_4348828.fa.gz
-```
-A few proteomes have been provided under `data/TEST/proteomes/` to run the test.
+
+The script `download_proteomes.py` can be used to download all the analysed proteomes for a species.
+
+A few proteomes have been provided under `data/TEST/proteomes/` in order to run the test script.
 
 ## DOCUMENTATION
 
@@ -54,6 +54,36 @@ A few proteomes have been provided under `data/TEST/proteomes/` to run the test.
 - [analysis](analysis_code/README.md)
 - [figures](figures_code/README.md)
 
+## QUICK TEST
+```
+git clone https://github.com/g-insana/ett_ms.git
+cd ett_ms
+./testrun.sh
+```
+
+## FULL ANALYSIS
+
+For one species (SHIFL):
+```
+git clone https://github.com/g-insana/ett_ms.git
+cd ett_ms
+python3 ./fetch_datasets.py
+source env.sh
+./download_proteomes.py SHIFL
+$ETT_BIN/bs_bad_clusters_oscode_ins2_cm0.sh SHIFL
+```
+
+For all species:
+```
+git clone https://github.com/g-insana/ett_ms.git
+cd ett_ms
+python3 ./fetch_datasets.py
+source env.sh
+for species in 9ENTR ACIBA BURPE CAMJU CLODI ECOLX ENTFC HELPX KLEPN LEGPN LISMN MYCTX NEIGO NEIME PSEAI SALER SHIFL STAAU STREE VIBCL; do
+  ./download_proteomes.py ${species}
+  $ETT_BIN/bs_bad_clusters_oscode_ins2_cm0.sh ${species}
+done
+```
 
 ## LINKS
 
