@@ -1,0 +1,36 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below"
+authors:
+- family-names: "Insana"
+  given-names: "Giuseppe"
+  orcid: "https://orcid.org/0000-0002-8186-1026"
+- family-names: "Martin"
+  given-names: "Maria J."
+  orcid: "https://orcid.org/0000-0001-5454-2815"
+- family-names: "Pearson"
+  given-names: "William R."
+  orcid: "https://orcid.org/0000-0002-0727-3680"
+title: "Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes (code for the manuscript)"
+
+publication:
+  authors:
+  - family-names: "Insana"
+    given-names: "Giuseppe"
+    orcid: "https://orcid.org/0000-0002-8186-1026"
+  - family-names: "Martin"
+    given-names: "Maria J."
+    orcid: "https://orcid.org/0000-0001-5454-2815"
+  - family-names: "Pearson"
+    given-names: "William R."
+    orcid: "https://orcid.org/0000-0002-0727-3680"
+  doi: "10.64898/2026.05.19.725897"
+  title: "Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes"
+  journal: "BiorXiv"
+  year: 2026
+  
+related_resources:
+  - type: "code"
+    url: "https://github.com/g-insana/ett_ms"
+
+version: 2026.05.20
+date-released: 2026.05.20
