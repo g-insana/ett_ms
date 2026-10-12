@@ -3,7 +3,7 @@
 
 This repository contains the code for the analysis and figures of the manuscript:
 # Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
-[(doi 10.64898/2026.05.19.725897)](https://doi.org/10.64898/2026.05.19.725897)
+[(doi 10.1093/nargab/lqag129)](https://doi.org/10.1093/nargab/lqag129)
 
 ## Abstract
 
@@ -95,12 +95,12 @@ done
 
 ## CITATION
 
-If you find this software useful, please consider citing our [paper](https://doi.org/10.64898/2026.05.19.725897):
+If you find this software useful, please consider citing our [paper](https://doi.org/10.1093/nargab/lqag129):
 
 ``` 
 Insana, G., Martin, M.J. & Pearson, W.R.
 Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes
-BioRxiv (2026). https://doi.org/10.64898/2026.05.19.725897
+NAR Genome and Bioinformatics (2026). [https://doi.org/10.1093/nargab/lqag129](https://doi.org/10.1093/nargab/lqag129)
 ```
 
 Bibtex:
