@@ -105,17 +105,20 @@ NAR Genome and Bioinformatics (2026). [https://doi.org/10.1093/nargab/lqag129](h
 
 Bibtex:
 ```
-@article {Insana2026.05.19.725897,
-	author = {Insana, Giuseppe and Martin, Maria J. and Pearson, William R.},
-	title = {Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes},
-	elocation-id = {2026.05.19.725897},
-	year = {2026},
-	doi = {10.64898/2026.05.19.725897},
-	publisher = {Cold Spring Harbor Laboratory},
-	abstract = {MMseqs2 clustering was used to examine the uniformity of proteomes from 20 bacterial species. Clusters with proteins from >=\50% of proteomes typically contain proteins from 95\% of the proteomes and capture more than 80\% of the proteins in an organism. Protein clusters are highly uniform in length; across the 20 bacteria, the median cluster has more than 99\% of the proteins at the mode length. In contrast to this uniformity, some clusters contain dozens to hundreds of proteins that are considerably shorter (<75\%) than the mode-length, and a few clusters include proteins that are >133\% the mode length. Most "outlier" proteins are found in fewer than 10\% of clusters, and "high-outlier" clusters are over-represented in a small fraction of proteomes, that often have poor Proteome BUSCO fragment scores. Short-outlier proteins are artifacts; at least 80\% of short-outlier genomes contain mode-length copies of the protein, which were missed because of frame-shifts, termination codons, or initiation codon choice. As with "short-outlier" proteins, the ∼5\% of proteomes missing from the core (50\% participation) cluster set encode the missing protein more than 98\% of the time. MMseqs2 clustering with 50\% participation provides robust sets of core bacterial proteins. Competing Interest StatementThe authors have declared no competing interest. European Molecular Biology Laboratory core funds},
-	URL = {https://www.biorxiv.org/content/early/2026/05/19/2026.05.19.725897},
-	eprint = {https://www.biorxiv.org/content/early/2026/05/19/2026.05.19.725897.full.pdf},
-	journal = {bioRxiv}
+@article{10.1093/nargab/lqag129,
+    author = {Insana, Giuseppe and Martin, Maria J and Pearson, William R},
+    title = {Early terminated transcripts and missing proteins reflect artifacts in bacterial proteomes},
+    journal = {NAR Genomics and Bioinformatics},
+    volume = {8},
+    number = {4},
+    pages = {lqag129},
+    year = {2026},
+    month = {12},
+    abstract = {The high redundancy of many bacterial proteomes can be used to evaluate proteome quality and identify sequence errors. We have used MMseqs2 clustering with subsequent filtering to identify clusters that contain sequences from at least 50\% of the clustered proteomes to build sets of core proteins that include proteins from 95\% of the clustered bacteria. These clusters typically capture \&gt;80\% of proteins in the bacteria. Because these clusters have highly uniform length (the median cluster has \&gt;99\% of its proteins at the mode length), short (\&lt;75\% of mode length) or long (\&gt;133\%) proteins are likely artifacts. Most “outlier” proteins are found in fewer than 10\% of clusters, and “high-outlier” clusters are over-represented in a small fraction of proteomes, which often have poor proteome BUSCO fragment scores. Short-outlier proteins are artifacts; at least 80\% of short-outlier genomes contain mode-length copies of the protein, which were missed because of frameshifts, termination codons, or initiation codon choice. MMseqs2 clustering with 50\% participation provides robust sets of core bacterial proteins and can be used to identify lower-quality proteomes and proteins.},
+    issn = {2631-9268},
+    doi = {10.1093/nargab/lqag129},
+    url = {https://doi.org/10.1093/nargab/lqag129},
+    eprint = {https://academic.oup.com/nargab/article-pdf/8/4/lqag129/73097535/lqag129.pdf},
 }
 ```
 
