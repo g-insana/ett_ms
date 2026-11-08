@@ -95,7 +95,7 @@ done
 
 ## CITATION
 
-If you find this software useful, please consider citing our [paper](https://doi.org/10.1093/nargab/lqag129):
+If you find this software useful, please consider citing our [paper](https://doi.org/10.1093/nargab/lqag129)  ([pubmed 42991537](https://pubmed.ncbi.nlm.nih.gov/42991537/))::
 
 ``` 
 Insana, G., Martin, M.J. & Pearson, W.R.
